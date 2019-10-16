@@ -14,16 +14,21 @@ import java.util.LinkedList;
 import java.util.Locale;
 import java.util.Scanner;
 
-
-
-
 public class LeerCliente {
 
 	
+public static ArrayList<String> getMailsClientes(LinkedList <Cliente> listaClientes){
+	ArrayList <String> listaMails=new ArrayList <String>();
+	for(Cliente p : listaClientes) {
+		
+		listaMails.add(p.getEmail());
+	}
+	return listaMails;
+}
 public static LinkedList<Cliente> getListaDeCliente(String miLista) throws FileNotFoundException{
 		
 		LinkedList<Cliente> lista = new LinkedList<Cliente>();
-		//Creamos un archivo y utilizamos el metodo scanner para leerlo
+		//Creamos un ar}chivo y utilizamos el metodo scanner para leerlo
 		File f = new File(miLista);
 		Scanner sc = new Scanner(f);
 		sc.useLocale(Locale.ENGLISH);

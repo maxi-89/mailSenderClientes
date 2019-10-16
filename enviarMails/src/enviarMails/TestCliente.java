@@ -15,10 +15,15 @@ public static void main(String[] args) throws IOException, MessagingException {
 	listaMails.add("pcmax89@gmail.com");
 	listaMails.add("noepaezsolange88@gmail.com");
 	listaMails.add("maxi.rodriguez.3105@gmail.com");
-	listaMails.add("lcarnero@uno.edu.ar");
+	Cliente c1=new Cliente("maxi", "pcmax89@gmail.com", 134567);
+	Cliente c2=new Cliente("maxi", "maxi.rodriguez.3105@gmail.com", 134567);
+	Cliente c3=new Cliente("noe", "noepaezsolange88@gmail.com", 134567);
 	
-	//LinkedList<Cliente> empresa=new LinkedList<Cliente>();
 	
+	LinkedList<Cliente> empresa=new LinkedList<Cliente>();
+	empresa.add(c1);
+	empresa.add(c2);
+	empresa.add(c3);
 	//LinkedList<Cliente> empresa2=new LinkedList<Cliente>();
 	/*System.out.println("empezando agregando clientes a la lista");
 	System.out.println();
@@ -32,7 +37,7 @@ public static void main(String[] args) throws IOException, MessagingException {
 	//empresa2=LeerCliente.getListaDeCliente("listaClientes");
 	//System.out.println(empresa2);
 	EnviarCorreo.enviarUnCorreo("noepaezsolange88@gmail.com", "el programa funciona");
-	EnviarCorreo.enviarMuchosCorreos(listaMails, "Probando mailSender con javamail, con un array de mails, envio texto plano aunque la libreria permite multimedia atravez de mimmemessage");
+	EnviarCorreo.enviarMuchosCorreos(empresa, "Probando mailSender con javamail, con un array de mails, envio texto plano aunque la libreria permite multimedia atravez de mimmemessage");
 
 	
 }

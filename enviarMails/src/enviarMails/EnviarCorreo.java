@@ -50,12 +50,15 @@ public class EnviarCorreo {
 	    transport.close();
 	}
 	
-	public static void enviarMuchosCorreos(ArrayList <String> listaClientes, String mensaje) throws MessagingException {
+	public static void enviarMuchosCorreos(LinkedList <Cliente> listaClientes, String mensaje) throws MessagingException {
+		
+		
+		ArrayList <String> lMails=new ArrayList <String>();
+		lMails=LeerCliente.getMailsClientes(listaClientes);
 		
 		int i=0;
-		
-		
-		for (i=0;i<listaClientes.size();i++) {
+	
+		for (i=0;i<lMails.size();i++) {
 	
 		System.out.println("Enviando mail...");
 		
@@ -83,7 +86,7 @@ public class EnviarCorreo {
 	    message.setFrom(new InternetAddress("pcmax89@mail.com"));
 	    message.setText(mensaje);
 	    message.addRecipient(Message.RecipientType.TO,
-	         new InternetAddress(listaClientes.get(i)));
+	         new InternetAddress(lMails.get(i)));
 
 	    transport.connect("pcmax89@gmail.com", "Noe420472");//This is line 46
 	    transport.sendMessage(message,
