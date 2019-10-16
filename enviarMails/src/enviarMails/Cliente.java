@@ -11,10 +11,24 @@ public class Cliente implements Comparable <Cliente>{
 //constructor con parametros nombre, email, celular
 	public Cliente(String idNombre, String email, Integer celular) {
 		this.idNombre=idNombre;
-		this.email=email;
+		this.setEmail(email);
 		this.celular=celular;
 			
 	}
+	
+	
+
+	public String getEmail() {
+		return email;
+	}
+
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
 
 	@Override
 	public int hashCode() {
