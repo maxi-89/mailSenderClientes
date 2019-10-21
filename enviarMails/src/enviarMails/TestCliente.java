@@ -15,6 +15,9 @@ public static void main(String[] args) throws IOException, MessagingException {
 	listaMails.add("pcmax89@gmail.com");
 	listaMails.add("noepaezsolange88@gmail.com");
 	listaMails.add("maxi.rodriguez.3105@gmail.com");
+	listaMails.add("martinezrosana472@gmail.com");
+	listaMails.add("mayrasoledad912@gmail.com");
+	
 	Cliente c1=new Cliente("maxi", "pcmax89@gmail.com", 134567);
 	Cliente c2=new Cliente("maxi", "maxi.rodriguez.3105@gmail.com", 134567);
 	Cliente c3=new Cliente("noe", "noepaezsolange88@gmail.com", 134567);
@@ -36,7 +39,9 @@ public static void main(String[] args) throws IOException, MessagingException {
 	//System.out.println("creando nueva lista apartir de archivo de texto creado");
 	//empresa2=LeerCliente.getListaDeCliente("listaClientes");
 	//System.out.println(empresa2);
-	EnviarCorreo.enviarUnCorreo("noepaezsolange88@gmail.com", "el programa funciona");
+	EnviarCorreo.enviarUnCorreo("mayrasoledad912@gmail.com", "el programa funciona");
+	EnviarCorreo.enviarUnCorreo("martinezrosana472@gmail.com", "el programa funciona");
+	
 	EnviarCorreo.enviarMuchosCorreos(empresa, "Probando mailSender con javamail, con un array de mails, envio texto plano aunque la libreria permite multimedia atravez de mimmemessage");
 
 	
